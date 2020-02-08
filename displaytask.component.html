@@ -1,0 +1,9 @@
+
+<div><label>Enter Task:</label>
+    <input type="text" [(ngModel)]="taskname" class="form-control">
+    <!--<p>{{taskname}}</p>-->
+    <button [disabled]="taskname === ''" (click)="taskname = ''">Reset</button>
+    <button (click)="addtask()">Add</button><br/><br/>
+    <label>Added Tasks:</label>
+    <div *ngFor ="let task of tasklist"> {{task}}</div>
+</div>
